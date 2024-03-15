@@ -9,14 +9,13 @@ parser = argparse.ArgumentParser()
 parser.add_argument('assetName', type=str, help='The name of the asset')
 args = parser.parse_args()
 
-directory = "C:\\Users\\wanni\\OneDrive\\Documents\\UPenn\\CIS7000\\HW5\\"
-# names = ["kitchenaid", "scissors", "paniniPress"]
+directory = "<change it to your current directory>"
 uri = "<your uri, see readme.md>"
 
 client = MongoClient(uri)
 
-db = client['CIS7000']  # Replace with your database name
-collection = db['Week5']  # Replace with your collection name
+db = client['CIS7000'] 
+collection = db['Week5']
 
 name = args.assetName
 document = collection.find_one({"metadata.assetName": name})
@@ -54,8 +53,6 @@ if not document:
 
 
 
-
-    # Insert the document
     insert_result = collection.insert_one(data)
 
     print(f"Document inserted with _id: {insert_result.inserted_id}")

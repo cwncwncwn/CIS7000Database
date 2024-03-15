@@ -2,12 +2,13 @@
 ### Prerequisites
  - Install pymongo library
 ### Upload.py
- - Change the uri defined in line 14 by your own (after adding you to the database, you should be able to have access to it. Let me know if there are problems!:).
+ - Change the uri defined in line 13 by your own (after adding you to the database, you should be able to have access to it. Let me know if there are problems!:).
     - Open the database overview site in MongoDB Atlas
     - Click "connect"
     - Click "MongoDB for VSCode"
     - Replace the uri in our script by the link in the 3rd step indicated on the website.
  - Place the script and folder of the asset in the same directory
+ - Change directory name in line 12 to the directory with the folders of the assets
  - Run `python upload.py <assetName>` and the asset should appear in the database.
 
  ### Download.py
